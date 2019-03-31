@@ -2,7 +2,6 @@
   <div class="row">
     <div class="col-xs-12">
       <h2>Blog</h2>
-      <p>Mis à jour: {{lastUpdate | date: 'yMMMMEEEd'| uppercase}}</p>
       <ul class="list-group">
         <app-post *ngFor="let p of posts"
                       [title]="p.name"
