@@ -1,0 +1,24 @@
+
+  <li [ngClass]="{'list-group-item': true,
+                'list-group-item-success':loveIts>0,
+                'list-group-item-danger': loveIts<0
+
+ }">
+  <h4 [ngStyle]="{color: getColor()}">  {{ title }}
+  <h6 style="color:grey" align="right">{{ created_at|date:'short' }} </h6>
+  </h4>
+
+    <h2>  {{ content }}</h2>
+    <button
+      class="btn btn-success"
+      [disabled]="false"
+      (click)="onLove(1)">
+                LoveIts!</button>
+    <button
+      class="btn btn-danger"
+      background-color="red"
+      [disabled]="false"
+      (click)="onLove(-1)"
+            >Don't love it!</button>
+
+</li>
