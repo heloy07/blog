@@ -1,6 +1,6 @@
 # Blog
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
+This project is an example of a simple blog generated with Angular Framework
 
 ## Development server
 
