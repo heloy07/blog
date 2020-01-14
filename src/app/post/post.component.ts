@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+import { Subscription } from 'rxjs';
+import { PostService } from '../services/post.service';
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
@@ -9,11 +10,16 @@ export class PostComponent implements OnInit {
   @Input() title :string;
   @Input() content :string;
   @Input() loveIts: number=0;
+  @Input() id:number;
   @Input() created_at: Date = new Date();
 
-  constructor() { }
+  constructor(private postsService: PostService) { }
 
+
+  
   ngOnInit() {
+  
+    
   }
   getColor(){
     if(this.loveIts>0){
@@ -27,7 +33,11 @@ export class PostComponent implements OnInit {
   }
   onLove(love:number){
     this.loveIts+=love;
-    console.log('hey there');
+
+  }
+  deletePost(id:number){
+    //console.log("this is the id: "+id);
+    this.postsService.deletePost(id);
 
   }
 

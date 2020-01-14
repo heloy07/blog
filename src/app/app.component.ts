@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { PostService } from './services/post.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,22 +9,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'blog';
-  posts = [
- {
-   name: 'Mon premier post',
-   content: 'contenu de mon premier post'
- },
- {
-   name: 'Mon deuxième post',
-   content: 'contenu de mon deuxième post'
- },
- {
-   name: 'Mon troisième post',
-   content: 'contenu de mon troisième post'
- },
- {
-   name: 'Mon dernier post',
-   content: 'contenu de mon dernier post'
- }
-];
+
+   constructor() { }
+
+ 
+   
+   ngOnInit() {
+     //this.postsService.getPost();
+   
+   }
+  
 }
+
+
